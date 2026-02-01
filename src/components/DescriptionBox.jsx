@@ -16,7 +16,7 @@ function DescriptionBox() {
       <div className="absolute inset-0 bg-orange-500/90"></div>
 
       {/* Text content */}
-      <p className="relative text-2xl md:text-4xl font-bold text-black text-center max-w-3xl">
+      <p className="relative text-xl md:text-3xl font-normal text-black text-center max-w-3xl tracking-tight leading-relaxed">
         Discover a curated hub of player statistics, trends, and insights to elevate your basketball knowledge.
       </p>
     </motion.div>

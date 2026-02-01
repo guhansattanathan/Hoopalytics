@@ -1,5 +1,5 @@
 // Services.jsx
-import BallBackground from "../assets/ball-background.jpg";
+import BallBackground from "../assets/nets-background.jpg";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -22,11 +22,8 @@ const Services = () => {
         {/* Title */}
         <motion.h1
           className="
-            text-7xl md:text-8xl text-center
-            font-extrabold uppercase
-            tracking-tight
-            leading-[1.1]
-            text-white
+            text-5xl md:text-6xl font-extrabold text-white uppercase
+            tracking-tight leading-tight mb-6
           "
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -41,28 +38,28 @@ const Services = () => {
           <button
             onClick={() => window.location.href = "/top-10-players"}
             className="
-              w-72 h-40 text-white font-semibold rounded-lg
+              w-72 h-40 text-white font-extralight rounded-lg
               flex flex-col justify-center items-center
               bg-white/10 backdrop-blur-md border border-white/20
               shadow-lg hover:bg-white/20 transition
             "
           >
-            <span className="text-xl">Top 10 Players</span>
-            <span className="text-sm mt-2">Filter top 10 players by stats</span>
+            <span className="text-2xl tracking-tight">Top 10 Players</span>
+            <span className="text-sm mt-2 text-white/70 tracking-wide">Filter top 10 players by stats</span>
           </button>
 
           {/* Player Lookup */}
           <button
             onClick={() => window.location.href = "/player-lookup"}
             className="
-              w-72 h-40 text-white font-semibold rounded-lg
+              w-72 h-40 text-white font-extralight rounded-lg
               flex flex-col justify-center items-center
               bg-white/10 backdrop-blur-md border border-white/20
               shadow-lg hover:bg-white/20 transition
             "
           >
-            <span className="text-xl">Player Lookup</span>
-            <span className="text-sm mt-2">Search for player stats and info</span>
+            <span className="text-2xl tracking-tight">Player Lookup</span>
+            <span className="text-sm mt-2 text-white/70 tracking-wide">Search for player stats and info</span>
           </button>
         </div>
       </div>

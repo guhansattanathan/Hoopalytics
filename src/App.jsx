@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
 
         {/* Top Players Table Page */}
-        <Route path="/top-players" element={<TopPlayersTable />} />
+        <Route path="/top-10-players" element={<TopPlayersTable />} />
 
       </Routes>
     </Router>

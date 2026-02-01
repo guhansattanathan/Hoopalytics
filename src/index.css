@@ -3,4 +3,5 @@
 
 html {
   font-family: "Oswald", system-ui, sans-serif;
+  scroll-behavior: smooth;
 }
