@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // assuming you use react-router for navigation
 
-const TopPlayersHeader = () => {
+const ServiceHeader = ({title, subtitle}) => {
   return (
     <div className="relative bg-black w-full py-16 flex flex-col items-center">
       {/* Navbar */}
@@ -27,7 +27,7 @@ const TopPlayersHeader = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
         >
-          Top 10 Players
+          { title }
         </motion.h1>
 
         <motion.p
@@ -36,12 +36,11 @@ const TopPlayersHeader = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.2 }}
         >
-          Find the top 10 players for every major stat category and discover
-          who leads in points, rebounds, assists, and more.
+          {subtitle}
         </motion.p>
       </motion.div>
     </div>
   );
 };
 
-export default TopPlayersHeader;
+export default ServiceHeader;
