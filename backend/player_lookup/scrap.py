@@ -20,7 +20,7 @@ if results_container:
 
     with open("../../data/archive/nba_stats_2026.csv", "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["Name","Team","Position","GP","MPG","FTP","2PP","3PP","TSP","PPG","RPG","APG","SPG","BPG","TOV","ORTG","DRTG"])
+        writer.writerow(["Name","Team","Position","GP","MPG","FT%","2P%","3P%","TS%","PPG","RPG","APG","SPG","BPG","TOV","ORTG","DRTG"])
 
         for row in player_rows[1:]:
             cols = row.find_all("td")
@@ -28,7 +28,7 @@ if results_container:
                 continue
 
             name = cols[1].text.strip()
-            team = cols[2].text.strip()
+            team = cols[2].text.strip().upper()
             position = cols[4].text.strip()
             gp = cols[6].text.strip()
             mpg = cols[7].text.strip()
