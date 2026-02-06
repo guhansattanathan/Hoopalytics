@@ -16,14 +16,16 @@ ALLOWED_HOSTS = ["*"]  # For development only
 
 # Application definition
 INSTALLED_APPS = [
+    "corsheaders",  # CORS
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "playground",  # your app
-    "corsheaders",  # CORS
+    "playground",
+    "reality_check",
+    "player_lookup"
 ]
 
 MIDDLEWARE = [

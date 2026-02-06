@@ -61,6 +61,20 @@ const Services = () => {
             <span className="text-2xl tracking-tight">Player Lookup</span>
             <span className="text-sm mt-2 text-white/70 tracking-wide">Search for player stats and info</span>
           </button>
+
+          {/* Team Visualizer */}
+          <button
+            onClick={() => window.location.href = "/reality-check"}
+            className="
+              w-72 h-40 text-white font-extralight rounded-lg
+              flex flex-col justify-center items-center
+              bg-white/10 backdrop-blur-md border border-white/20
+              shadow-lg hover:bg-white/20 transition
+            "
+          >
+            <span className="text-2xl tracking-tight">Reality Check</span>
+            <span className="text-sm mt-2 text-white/70 tracking-wide">Is your team actually good?</span>
+          </button>
         </div>
       </div>
     </div>
