@@ -125,13 +125,7 @@ export default function StrengthOfScheduleChart() {
 
                   return (
                     <div className="bg-black border border-white/20 rounded-md p-3 text-sm text-white">
-                      <p
-                        className={`font-semibold ${
-                          d.conference === "East" ? "text-blue-400" : "text-orange-400"
-                        }`}
-                      >
-                        {d.team}
-                      </p>
+                      <p className={`font-semibold ${ d.conference === "East" ? "text-blue-400" : "text-orange-400"}`}> {d.team} </p>
                       <p>WIN%: {(d.winPct * 100).toFixed(1)}%</p>
                       <p>Expected WIN%: {(d.eWinPct * 100).toFixed(1)}%</p>
                       <p>SoS: {d.sos}</p>

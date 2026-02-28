@@ -4,10 +4,16 @@ import DescriptionBox from "../components/DescriptionBox";
 import Inspiration from "../components/Inspiration";
 import Footer from "../components/Footer";
 
-const LandingPage = () => {
+const LandingPage = ({ isLoggedIn, name, setIsLoggedIn, setName, setEmail }) => {
   return (
     <>
-      <Header />
+      <Header
+        isLoggedIn={isLoggedIn}
+        name={name}
+        setIsLoggedIn={setIsLoggedIn}
+        setName={setName}
+        setEmail={setEmail}
+      />
       <DescriptionBox />
       <Services />
       <Inspiration />

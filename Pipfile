@@ -9,6 +9,8 @@ django-cors-headers = "*"
 requests = "*"
 beautifulsoup4 = "*"
 lxml = "*"
+djangorestframework = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

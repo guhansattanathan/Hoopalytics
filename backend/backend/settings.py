@@ -17,6 +17,7 @@ ALLOWED_HOSTS = ["*"]  # For development only
 # Application definition
 INSTALLED_APPS = [
     "corsheaders",  # CORS
+    "rest_framework",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -25,7 +26,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "playground",
     "reality_check",
-    "player_lookup"
+    "player_lookup",
+    "user"
 ]
 
 MIDDLEWARE = [

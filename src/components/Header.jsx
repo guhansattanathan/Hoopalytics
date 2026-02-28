@@ -1,6 +1,16 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
+function Header({ isLoggedIn, name, setIsLoggedIn, setName, setEmail }) {
+  const [open, setOpen] = useState(false);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setName("");
+    setEmail("");
+  };
+
   return (
     <div
       className="relative bg-black bg-contain bg-center bg-no-repeat"
@@ -15,25 +25,74 @@ function Header() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Navbar */}
-      <nav className="relative flex justify-center space-x-10 py-6 text-white font-semibold uppercase tracking-wide z-10">
-        <a
-          href="#services"
-          className="hover:text-orange-500 transition-colors duration-200"
-        >
-          Services
-        </a>
-        <a
-          href="#inspiration"
-          className="hover:text-orange-500 transition-colors duration-200"
-        >
-          Inspiration
-        </a>
-        <a
-          href="#about"
-          className="hover:text-orange-500 transition-colors duration-200"
-        >
-          About Us
-        </a>
+      <nav className="relative flex justify-center items-center py-6 text-white font-semibold uppercase tracking-wide z-10">
+        {/* LEFT LINKS */}
+        <div className="flex space-x-10">
+          <a
+            href="#services"
+            className="hover:text-orange-500 transition-colors duration-200"
+          >
+            Services
+          </a>
+          <a
+            href="#inspiration"
+            className="hover:text-orange-500 transition-colors duration-200"
+          >
+            Inspiration
+          </a>
+          <a
+            href="#about"
+            className="hover:text-orange-500 transition-colors duration-200"
+          >
+            About Us
+          </a>
+        </div>
+
+        {/* RIGHT AUTH LINKS */}
+        <div className="absolute right-10">
+          <div className="relative">
+            <div className="flex items-center space-x-4 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 border border-white/20">
+              {!isLoggedIn ? (
+                <>
+                  <a
+                    href="/login"
+                    className="hover:text-orange-500 transition-colors duration-200"
+                  >
+                    Login
+                  </a>
+
+                  <div className="w-px h-5 bg-white/30" />
+
+                  <Link
+                    to="/register"
+                    className="hover:text-orange-500 transition-colors duration-200"
+                  >
+                    Register
+                  </Link>
+                </>
+              ) : (
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="hover:text-orange-500 transition-colors duration-200 flex items-center gap-2"
+                >
+                  {name} ▾
+                </button>
+              )}
+            </div>
+
+            {/* DROPDOWN */}
+            {isLoggedIn && open && (
+              <div className="absolute right-0 mt-2 w-40 bg-black/80 backdrop-blur-md border border-white/20 rounded-lg shadow-lg overflow-hidden">
+                <button
+                  onClick={handleLogout}
+                  className="w-full text-left px-4 py-2 hover:bg-white/10 transition"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
       </nav>
 
       {/* Header */}

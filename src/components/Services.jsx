@@ -1,6 +1,5 @@
 // Services.jsx
 import BallBackground from "../assets/nets-background.jpg";
-import React from "react";
 import { motion } from "framer-motion";
 
 const Services = () => {
